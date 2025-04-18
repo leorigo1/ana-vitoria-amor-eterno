@@ -1,18 +1,22 @@
-
 import React, { useState } from 'react';
 import { Heart } from 'lucide-react';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import FloatingHearts from '../components/FloatingHearts';
 
 const LoveMessage = () => {
   const [isFullMessageVisible, setIsFullMessageVisible] = useState(false);
+  const [showHearts, setShowHearts] = useState(false);
 
   const toggleFullMessage = () => {
     setIsFullMessageVisible(!isFullMessageVisible);
+    setShowHearts(true);
+    setTimeout(() => setShowHearts(false), 2000);
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-100 to-red-100 flex items-center justify-center px-4 py-12">
-      <div className="max-w-2xl w-full bg-white shadow-2xl rounded-3xl p-8 md:p-12 text-center transform transition-all duration-500 hover:scale-105">
+      <div className="max-w-2xl w-full bg-white shadow-2xl rounded-3xl p-8 md:p-12 text-center transform transition-all duration-500 hover:scale-105 relative">
+        <FloatingHearts active={showHearts} />
         <Heart className="mx-auto text-red-500 mb-6" size={64} />
         
         <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
@@ -50,7 +54,7 @@ const LoveMessage = () => {
             </>
           ) : (
             <p>
-              Minha Ana Vitória, você é o amor da minha vida. Clique para ver a mensagem completa.
+              Te amo pra sempre minha BBzinha Ana Vitória.
             </p>
           )}
         </div>
