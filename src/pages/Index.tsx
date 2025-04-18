@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Heart } from 'lucide-react';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -37,7 +38,7 @@ const LoveMessage = () => {
           {isFullMessageVisible ? (
             <>
               <p className="mb-4">
-                Meu amor, minha companheira, minha melhor amiga. Você é o mais precioso presente que a vida me deu. Cada dia ao seu lado é um milagre de amor, de conexão, de cumplicidade.
+                Minha namorada, Você é o mais precioso presente que a vida me deu. Cada dia ao seu lado é um milagre de amor, de conexão, de cumplicidade.
               </p>
               
               <p className="mb-4">
@@ -49,7 +50,7 @@ const LoveMessage = () => {
               </p>
               
               <p>
-                Sou infinitamente grato por ter você. Você é meu lar, minha paz, minha aventura. Te amo além das palavras, além do tempo, além de tudo.
+                Sou infinitamente grato por ter você. Você é meu lar, minha paz. Te amo além das palavras, além do tempo.
               </p>
             </>
           ) : (
@@ -71,3 +72,4 @@ const LoveMessage = () => {
 };
 
 export default LoveMessage;
+
