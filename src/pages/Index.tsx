@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Heart } from 'lucide-react';
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const LoveMessage = () => {
   const [isFullMessageVisible, setIsFullMessageVisible] = useState(false);
@@ -18,6 +19,16 @@ const LoveMessage = () => {
           Minha Amada Ana Vitória
         </h1>
         
+        <div className="mb-8 overflow-hidden rounded-2xl shadow-lg">
+          <AspectRatio ratio={16/9}>
+            <img 
+              src="/lovable-uploads/f11f3033-9507-4deb-986e-c2f0a72d80f5.png"
+              alt="Momentos especiais juntos"
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+            />
+          </AspectRatio>
+        </div>
+
         <div className="text-lg text-gray-700 leading-relaxed mb-6">
           {isFullMessageVisible ? (
             <>
@@ -56,4 +67,3 @@ const LoveMessage = () => {
 };
 
 export default LoveMessage;
-
