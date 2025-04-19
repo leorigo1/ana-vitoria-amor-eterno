@@ -55,7 +55,7 @@ const LoveMessage = () => {
             </>
           ) : (
             <p>
-              Te amo pra sempre minha BBzinha Ana Vitória.
+              Te amo pra sempre minha BBzinha!
             </p>
           )}
         </div>
